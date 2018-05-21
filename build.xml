@@ -31,7 +31,7 @@
     </fileset>
   </path>
 
-  <target name="all" depends="clean,compile,dist,deploy"
+  <target name="all" depends="clean,compile,dist"
           description="Clean work dirs, then compile and create a WAR"/>
 
   <target name="clean"
@@ -70,8 +70,8 @@
 	
   </target>
   
-  <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask" />
-  <!---->
+  <!-- <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask" />
+  
     <target name="deploy" depends="dist"
           description="Deploy application as a WAR file">
    
@@ -83,7 +83,7 @@
 			path="/hello" 
 			war="file:///C:/helloworld/dist/hello.war"
 		/>
- <delete dir="${work.home}"/>
+ <delete dir="${work.home}"/> -->
 	
   </target>
   
